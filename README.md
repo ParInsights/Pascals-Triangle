@@ -29,6 +29,6 @@ C(lineNumber, i - 1) = lineNumber! / ((lineNumber - i + 1)! * (i - 1)!)
 We can derive following expression from above two expressions:
 
 ```
-C(lineNumber, i) = C(lineNumber, i - 1) * (lineNumber - i + 1) / i
-So C(lineNumber, i) can be calculated from C(lineNumber, i - 1) in O(1) time.
+C(lineNumber, i) = C(lineNumber, i - 1) * (lineNumber - i + 1) / i ```
+So ```C(lineNumber, i) can be calculated from C(lineNumber, i - 1) in O(1) time.
 ```
