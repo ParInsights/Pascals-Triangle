@@ -8,3 +8,27 @@ The rows of Pascal's triangle are conventionally enumerated starting with row n 
 ![Image of Yaktocat](https://wonderopolis.org/wp-content/uploads/2017/01/1853_Pascals_Triangledreamstime_xxl_69735729.jpg)
 
 
+
+## Formulation
+The entry in the nth row and kth column of Pascal's triangle is denoted Formula. For example, the unique nonzero entry in the topmost row is Formula example.
+
+With this notation, the construction of the previous paragraph may be written as follows:
+
+![Image of Formula](https://slideplayer.com/slide/12222370/72/images/9/Pascal%E2%80%99s+formula+Combinatorial+proof%3A.jpg) 
+
+
+
+## Calculation for triangle entries in O(n) time:
+
+We know that i-th entry in a line number lineNumber is Binomial Coefficient C(lineNumber, i) and all lines start with value 1. The idea is to calculate C(lineNumber, i) using C(lineNumber, i-1). It can be calculated in O(1) time using the following:
+
+```C(lineNumber, i)   = lineNumber! / ((lineNumber - i)! * i!)>
+C(lineNumber, i - 1) = lineNumber! / ((lineNumber - i + 1)! * (i - 1)!) 
+```
+
+We can derive following expression from above two expressions:
+
+```
+C(lineNumber, i) = C(lineNumber, i - 1) * (lineNumber - i + 1) / i
+So C(lineNumber, i) can be calculated from C(lineNumber, i - 1) in O(1) time.
+```
